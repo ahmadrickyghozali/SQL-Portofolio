@@ -1,0 +1,67 @@
+--- Day 3
+
+-- Select
+
+SELECT * FROM `dqlab21-480211.house_price.price`;
+
+-- Select 2 Columns
+SELECT SqFt, Price FROM `dqlab21-480211.house_price.price`;
+
+-- Select Calculate
+Select Home, Price, Price*1.10 as Price_With_PPN, CAST(Price*1.10 as INT) as Price_With_PPN FROM `dqlab21-480211.house_price.price`;
+
+--- Order By
+Select Home, Price, Price*1.10 as Price_With_PPN, CAST(Price*1.10 as INT) as Price_With_PPN FROM `dqlab21-480211.house_price.price` order by Price,Home Desc;
+
+--- Agregate
+---- Count
+Select count(*) as total_rumah from `dqlab21-480211.house_price.price`;
+Select count(distinct Home) from `dqlab21-480211.house_price.price`;
+
+---- Average
+Select avg(Price) as avg_price from `dqlab21-480211.house_price.price`;
+
+---- Min and Max
+Select MIN(Price) as min_price, Max(Price) as max_price from `dqlab21-480211.house_price.price`;
+
+
+---- SUM
+Select Sum(Price) as total_price from `dqlab21-480211.house_price.price`;
+
+--- GROUP BY
+---- Melihat Jumlah Rumah berdasarkan Bedrooms
+Select count(Home) as total_rumah from `dqlab21-480211.house_price.price` group by Bedrooms;
+
+Select Bedrooms from `dqlab21-480211.house_price.price`;
+
+---- Tampilkan Bedrooms, Harga Rata-Rata per Masing-Masing Bedrooms;
+Select Bedrooms, Avg(Price) as avg_price_home from `dqlab21-480211.house_price.price` group by Bedrooms;
+
+---- Tampilkan Bedrooms, Count, Min Price, Max Price, Avg Price berdasarkan Bedrooms
+SELECT Bedrooms, count(bedrooms) as bedrooms_no, min(price) as min_Price, max(price) as max_Price, cast (avg(price) as int) as avg_bedrooms from `dqlab21-480211.house_price.price` group by Bedrooms
+
+
+-- Having
+---- Tampilakn Rumah mana saja yg memiliki Bedrooms >3
+SELECT Bedrooms, count(*) as total_rumah from `dqlab21-480211.house_price.price` GROUP BY Bedrooms having Bedrooms > 3
+
+
+-- WHERE/Filter tanpa group by
+SELECT * from  `dqlab21-480211.house_price.price` Where Bedrooms>3;
+
+
+-- Combination
+--- Tampilkan Bedrooms, Total Bedrooms, Avg Price dimana Price >200000 dan AVG Price >400000 dan order by avg_price desc 
+
+select Bedrooms, count(*) as total_unit, AVG(Price) as avg_price from `dqlab21-480211.house_price.price`
+Where Price > 100000
+Group by Bedrooms
+Having avg(Price)>130000
+order by avg_price desc;
+
+
+
+
+
+
+

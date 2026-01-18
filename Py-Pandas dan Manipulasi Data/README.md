@@ -1,46 +1,59 @@
-# SQL JOIN – Query Join Fundamentals
+# Pandas & Data Manipulation (Python)
 
-## 📌 Overview
-Project ini merangkum pembelajaran **SQL JOIN** untuk menggabungkan data dari beberapa tabel. Fokus pada pemahaman logika join dan penggunaannya dalam analisis data relasional.
+Repository ini berisi **Jupyter Notebook** yang membahas dasar-dasar **manipulasi data menggunakan Python (Pandas)**. Materi difokuskan pada operasi yang umum digunakan dalam proses **data cleaning** dan **data preprocessing**.
+
+## 📂 Isi Repository
+
+* `Py- Pandas dan Manipulasi Data.ipynb`
+
+  * Mengubah tipe data (khususnya ke format tanggal / datetime)
+  * Sorting data
+  * Manipulasi kolom dan baris
+  * Pengecekan dan perbaikan nilai data
+
+## 🎯 Tujuan
+
+Notebook ini dibuat untuk:
+
+* Melatih pemahaman dasar Pandas
+* Membiasakan proses pembersihan data sebelum analisis
+* Menjadi catatan belajar / portofolio data analyst pemula
+
+## 🛠️ Tools & Library
+
+* Python 3.x
+* Pandas
+* Jupyter Notebook
+
+## 🚀 Cara Menjalankan
+
+1. Clone repository ini
+2. Install dependency yang dibutuhkan:
+
+   ```bash
+   pip install pandas jupyter
+   ```
+3. Jalankan Jupyter Notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+4. Buka file `Py- Pandas dan Manipulasi Data.ipynb`
+
+## 📝 Catatan
+
+Notebook ini cocok untuk:
+
+* Mahasiswa
+* Fresh graduate
+* Peserta bootcamp data analyst
+* Siapa saja yang ingin belajar manipulasi data dengan Pandas
+
+## 👤 Author
+
+**Ahmad Ricky Ghozali**
+Data Analyst Enthusiast
 
 ---
 
-## 🛠 Tools
-- SQL
-- Relational Database (Sample Dataset)
-
----
-
-## 🔍 SQL Concepts Covered
-- INNER JOIN
-- LEFT JOIN & RIGHT JOIN
-- FULL OUTER JOIN
-- CROSS JOIN
-- SELF JOIN
-- Correlated Subquery
-- EXISTS
-
----
-
-## 🧠 Key Concepts
-- **INNER JOIN**: Mengambil data yang cocok di kedua tabel  
-- **LEFT / RIGHT JOIN**: Menampilkan seluruh data dari salah satu tabel  
-- **FULL OUTER JOIN**: Menggabungkan seluruh data dari kedua tabel  
-- **CROSS JOIN**: Menghasilkan semua kombinasi data  
-- **SELF JOIN**: Join pada tabel yang sama (hierarki data)  
-- **Correlated Subquery**: Subquery yang dieksekusi per baris
-
----
-
-## 🎯 Use Case
-- Menggabungkan data karyawan dan departemen
-- Analisis data relasional antar tabel
-- Menangani data yang tidak memiliki pasangan (NULL)
-- Analisis hierarki dan dependensi data
-
----
-
-## 📈 Learning Outcome
-- Memahami perbedaan setiap tipe JOIN
-- Menggunakan JOIN sesuai kebutuhan analisis
-- Menulis query SQL yang lebih kompleks dan terstruktur
+Jika ingin README versi **lebih teknis**, **bahasa Inggris**, atau **disesuaikan untuk GitHub portfolio**, bilang saja 👍
